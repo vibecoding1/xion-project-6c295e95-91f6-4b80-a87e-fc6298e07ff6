@@ -1,0 +1,12 @@
+import * as React from "react";
+import * as ToastPrimitives from "@radix-ui/react-toast";
+import { VariantProps } from "class-variance-authority";
+import { toastVariants } from "./toast";
+declare const ToastProvider: typeof ToastPrimitives.Provider;
+declare const ToastViewport: React.ForwardRefExoticComponent<React.HTMLAttributes<HTMLOListElement> & React.RefAttributes<HTMLOListElement>>;
+declare const Toast: React.ForwardRefExoticComponent<Omit<React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root>, "type"> & VariantProps<typeof toastVariants> & React.RefAttributes<HTMLLIElement>>;
+declare const ToastAction: React.ForwardRefExoticComponent<Omit<React.ComponentPropsWithoutRef<typeof ToastPrimitives.Action>, "type"> & React.RefAttributes<HTMLButtonElement>>;
+declare const ToastClose: React.ForwardRefExoticComponent<Omit<React.ComponentPropsWithoutRef<typeof ToastPrimitives.Close>, "type"> & React.RefAttributes<HTMLButtonElement>>;
+declare const ToastTitle: React.ForwardRefExoticComponent<Omit<React.ComponentPropsWithoutRef<typeof ToastPrimitives.Title>, "type"> & React.RefAttributes<HTMLDivElement>>;
+declare const ToastDescription: React.ForwardRefExoticComponent<Omit<React.ComponentPropsWithoutRef<typeof ToastPrimitives.Description>, "type"> & React.RefAttributes<HTMLDivElement>>;
+export { Toast, ToastAction, ToastClose, ToastTitle, ToastDescription, ToastProvider, ToastViewport, };
